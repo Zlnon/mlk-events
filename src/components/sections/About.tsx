@@ -10,8 +10,8 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="relative overflow-hidden bg-porcelain py-24 md:py-32">
-      <div className="container mx-auto px-4">
+    <section id="about" className="relative overflow-hidden bg-porcelain py-16 md:py-24 lg:py-32">
+      <div className="container mx-auto px-6 md:px-10 lg:px-16">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Text Content */}
           <motion.div
@@ -25,7 +25,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-6 font-serif text-4xl font-bold text-gold md:text-5xl lg:text-6xl"
+              className="mb-8 font-serif text-4xl font-bold leading-[1.2] text-gold md:text-5xl lg:text-6xl"
             >
               The Art of Celebration.
             </motion.h2>
@@ -34,7 +34,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-4 text-lg leading-relaxed text-charcoal"
+              className="space-y-6 text-lg leading-[1.75] text-charcoal"
             >
               <p>
                 Planning an event shouldn't feel like work. At MLKs Events, we

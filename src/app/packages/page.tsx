@@ -98,7 +98,7 @@ export default function PackagesPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-charcoal via-charcoal/95 to-gold/20 py-24 md:py-32">
+      <section className="relative overflow-hidden bg-linear-to-br from-charcoal via-charcoal/95 to-gold/20 py-24 md:py-32">
         <div className="container relative z-10 mx-auto px-4 text-center">
           <p className="mb-4 text-sm font-medium tracking-[0.3em] text-gold uppercase">
             The Signature Collection
@@ -161,7 +161,7 @@ export default function PackagesPage() {
                       <ul className="space-y-2">
                         {pkg.features.map((feature, i) => (
                           <li key={i} className="flex items-start text-sm">
-                            <Check className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-gold" />
+                            <Check className="mr-2 mt-0.5 h-4 w-4 shrink-0 text-gold" />
                             <span>{feature}</span>
                           </li>
                         ))}
@@ -184,7 +184,7 @@ export default function PackagesPage() {
       </section>
 
       {/* A La Carte Section */}
-      <section className="bg-gradient-to-b from-blush/20 to-porcelain py-24">
+      <section className="bg-linear-to-b from-blush/20 to-porcelain py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 font-serif text-3xl font-bold text-charcoal md:text-4xl">

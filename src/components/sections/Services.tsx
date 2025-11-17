@@ -4,6 +4,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Heart, Sparkles, Briefcase } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface ServiceCardProps {
   title: string;
@@ -49,7 +51,7 @@ function ServiceCard({ title, icon, details, delay }: ServiceCardProps) {
 
         {/* Back of Card */}
         <Card
-          className="absolute inset-0 flex flex-col justify-center bg-gradient-to-br from-blush to-blush/70 p-8"
+          className="absolute inset-0 flex flex-col justify-center bg-linear-to-br from-blush to-blush/70 p-8"
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
@@ -64,7 +66,7 @@ function ServiceCard({ title, icon, details, delay }: ServiceCardProps) {
                 key={index}
                 className="flex items-start text-sm text-charcoal/80"
               >
-                <span className="mr-2 mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gold" />
+                <span className="mr-2 mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                 {detail}
               </li>
             ))}
@@ -121,22 +123,22 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-gradient-to-b from-porcelain via-blush/10 to-porcelain py-24 md:py-32"
+      className="relative overflow-hidden bg-linear-to-b from-porcelain via-blush/10 to-porcelain py-16 md:py-24 lg:py-32"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 md:px-10 lg:px-16">
         {/* Section Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="mb-16 w-full text-center"
+          className="mb-16 text-center"
         >
           <motion.p
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-4 w-full text-sm font-medium tracking-[0.3em] text-gold uppercase"
+            className="mb-6 text-sm font-medium tracking-[0.3em] text-gold uppercase"
           >
             Our Services
           </motion.p>
@@ -144,7 +146,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="w-full font-serif text-4xl font-bold text-charcoal md:text-5xl lg:text-6xl"
+            className="font-serif text-4xl font-bold leading-[1.2] text-charcoal md:text-5xl lg:text-6xl"
           >
             How We Bring Your Vision to Life
           </motion.h2>
@@ -170,7 +172,29 @@ export default function Services() {
           transition={{ duration: 0.8, delay: 1 }}
           className="mt-16 text-center"
         >
-          <p className="text-lg text-charcoal/70">
+          <Link href="/packages">
+            <Button
+              size="lg"
+              className="mb-6 px-10 py-6 text-lg font-semibold transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] hover:scale-105"
+              style={{
+                background: 'linear-gradient(135deg, #D4AF37 0%, #F4E5B8 50%, #D4AF37 100%)',
+                boxShadow: '0 0 20px rgba(212, 175, 55, 0.4), 0 4px 15px rgba(0, 0, 0, 0.3)'
+              }}
+            >
+              <span
+                style={{
+                  background: 'linear-gradient(135deg, #FFFFFF 20%, #FFF8DC 50%, #FFFFFF 80%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  fontWeight: 'bold'
+                }}
+              >
+                View Our Packages
+              </span>
+            </Button>
+          </Link>
+          <p className="text-lg leading-[1.6] text-charcoal/70">
             Not sure which package is right for you?{" "}
             <a
               href="#inquire"

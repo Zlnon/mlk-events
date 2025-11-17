@@ -58,7 +58,7 @@ function ProcessStep({ icon, title, description, index }: ProcessStepProps) {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.4, delay: index * 0.2 + 0.7 }}
-        className="max-w-xs text-charcoal/70"
+        className="max-w-xs leading-[1.6] text-charcoal/70"
       >
         {description}
       </motion.p>
@@ -98,11 +98,7 @@ export default function Process() {
   return (
     <section
       id="process"
-      className="relative overflow-hidden py-24 md:py-32"
-      style={{
-        background:
-          "linear-gradient(135deg, #FAFAFA 0%, #FADADD 50%, #FAFAFA 100%)",
-      }}
+      className="relative overflow-hidden bg-gradient-to-br from-porcelain via-blush/20 to-porcelain py-16 md:py-24 lg:py-32"
     >
       {/* Marble Texture Overlay */}
       <div
@@ -112,20 +108,20 @@ export default function Process() {
         }}
       />
 
-      <div className="container relative z-10 mx-auto px-4">
+      <div className="container relative z-10 mx-auto px-6 md:px-10 lg:px-16">
         {/* Section Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="mb-20 w-full text-center"
+          className="mb-16 text-center"
         >
           <motion.p
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-4 w-full text-sm font-medium tracking-[0.3em] text-gold uppercase"
+            className="mb-6 text-sm font-medium tracking-[0.3em] text-gold uppercase"
           >
             Our Process
           </motion.p>
@@ -133,7 +129,7 @@ export default function Process() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="w-full font-serif text-4xl font-bold text-charcoal md:text-5xl lg:text-6xl"
+            className="mb-6 font-serif text-4xl font-bold leading-[1.2] text-charcoal md:text-5xl lg:text-6xl"
           >
             From Vision to Reality
           </motion.h2>
@@ -141,7 +137,7 @@ export default function Process() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mx-auto mt-4 w-full max-w-2xl text-lg text-charcoal/70"
+            className="mx-auto max-w-2xl text-lg leading-[1.6] text-charcoal/70"
           >
             Our proven process ensures a seamless journey from your first
             consultation to your flawless celebration
@@ -186,7 +182,7 @@ export default function Process() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="mt-16 text-center"
         >
-          <p className="text-lg text-charcoal/70">
+          <p className="text-lg leading-[1.6] text-charcoal/70">
             Ready to get started?{" "}
             <a
               href="#inquire"

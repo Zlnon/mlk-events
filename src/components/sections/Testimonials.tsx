@@ -90,22 +90,22 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative overflow-hidden bg-linear-to-br from-charcoal via-charcoal/95 to-gold/20 py-24 md:py-32"
+      className="relative overflow-hidden bg-linear-to-br from-charcoal via-charcoal/95 to-gold/20 py-16 md:py-24 lg:py-32"
     >
-      <div className="container relative z-10 mx-auto px-4">
+      <div className="container relative z-10 mx-auto px-6 md:px-10 lg:px-16">
         {/* Section Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="mb-16 w-full text-center"
+          className="mb-16 text-center"
         >
           <motion.p
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-4 w-full text-sm font-medium tracking-[0.3em] text-gold uppercase"
+            className="mb-6 text-sm font-medium tracking-[0.3em] text-gold uppercase"
           >
             Testimonials
           </motion.p>
@@ -113,7 +113,7 @@ export default function Testimonials() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="w-full font-serif text-4xl font-bold text-white md:text-5xl lg:text-6xl"
+            className="font-serif text-4xl font-bold leading-[1.2] text-white md:text-5xl lg:text-6xl"
           >
             What Our Clients Say
           </motion.h2>
@@ -127,7 +127,7 @@ export default function Testimonials() {
           </div>
 
           {/* Testimonial Slider */}
-          <div className="relative min-h-[400px] overflow-hidden md:min-h-[300px]">
+          <div className="relative min-h-[450px] overflow-hidden pb-8 md:min-h-[350px]">
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -155,14 +155,16 @@ export default function Testimonials() {
                 className="absolute w-full"
               >
                 <div className="px-8 py-12 text-center md:px-16">
-                  <blockquote className="mb-8 font-serif text-2xl leading-relaxed text-white md:text-3xl lg:text-4xl">
+                  <blockquote className="mb-8 font-serif text-2xl leading-[1.6] text-white md:text-3xl lg:text-4xl">
                     "{testimonials[currentIndex].quote}"
                   </blockquote>
-                  <div className="text-white/80">
-                    <p className="mb-1 text-xl font-semibold text-gold">
+                  <div className="mt-8">
+                    <p className="mb-2 text-xl font-semibold text-gold md:text-2xl" style={{ textShadow: '0 2px 10px rgba(212, 175, 55, 0.5)' }}>
                       {testimonials[currentIndex].author}
                     </p>
-                    <p className="text-sm">{testimonials[currentIndex].event}</p>
+                    <p className="text-base text-white/90 md:text-lg" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}>
+                      {testimonials[currentIndex].event}
+                    </p>
                   </div>
                 </div>
               </motion.div>

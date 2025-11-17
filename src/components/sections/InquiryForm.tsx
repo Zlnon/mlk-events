@@ -62,22 +62,22 @@ export default function InquiryForm() {
   return (
     <section
       id="inquire"
-      className="relative overflow-hidden bg-linear-to-b from-porcelain to-blush/20 py-24 md:py-32"
+      className="relative overflow-hidden bg-gradient-to-b from-porcelain to-blush/20 py-16 md:py-24 lg:py-32"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 md:px-10 lg:px-16">
         {/* Section Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="mb-16 w-full text-center"
+          className="mb-16 text-center"
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-4 w-full font-serif text-4xl font-bold text-charcoal md:text-5xl lg:text-6xl"
+            className="mb-6 font-serif text-4xl font-bold leading-[1.2] text-charcoal md:text-5xl lg:text-6xl"
           >
             Let's Create Something Beautiful
           </motion.h2>
@@ -85,7 +85,7 @@ export default function InquiryForm() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mx-auto w-full max-w-2xl text-lg text-charcoal/70"
+            className="mx-auto max-w-2xl text-lg leading-[1.6] text-charcoal/70"
           >
             We're so excited to hear about your event. Please share a few
             details, and we'll be in touch to schedule your complimentary

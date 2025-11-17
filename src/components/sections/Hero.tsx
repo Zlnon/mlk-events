@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   const scrollToNextSection = () => {
@@ -26,14 +27,14 @@ export default function Hero() {
           {/* Fallback to gradient background if video fails */}
         </video>
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* Fallback gradient background */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-charcoal via-charcoal/90 to-gold/20" />
+      <div className="absolute inset-0 z-0 bg-linear-to-br from-charcoal via-charcoal/90 to-gold/20" />
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 md:px-10 lg:px-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,7 +46,10 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-6 w-full text-sm font-medium tracking-[0.3em] text-gold uppercase"
+            className="mb-6 text-sm font-medium tracking-[0.3em] text-gold uppercase"
+            style={{
+              textShadow: '0 0 20px rgba(212, 175, 55, 0.8), 0 0 40px rgba(212, 175, 55, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)'
+            }}
           >
             EST. 2025 • DOHA, QATAR
           </motion.p>
@@ -55,7 +59,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-6 w-full font-serif text-5xl font-bold leading-tight text-white md:text-7xl lg:text-8xl"
+            className="mb-8 font-serif text-5xl font-bold leading-[1.1] md:text-7xl lg:text-8xl"
+            style={{
+              background: 'linear-gradient(135deg, #FFFFFF 0%, #D4AF37 40%, #FFFFFF 70%, #D4AF37 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              filter: 'drop-shadow(0 0 40px rgba(212, 175, 55, 0.6)) drop-shadow(0 6px 25px rgba(0, 0, 0, 0.9))'
+            }}
           >
             We Create Magic.
             <br />
@@ -67,21 +78,28 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mb-10 w-full text-lg text-white/90 md:text-xl lg:text-2xl"
+            className="mb-12 text-lg leading-[1.6] text-white md:text-xl lg:text-2xl font-medium"
+            style={{
+              textShadow: '0 2px 20px rgba(212, 175, 55, 0.4), 0 4px 15px rgba(0, 0, 0, 0.8)'
+            }}
           >
             MLKs Events: Bespoke Wedding & Event Planning.
           </motion.p>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
+            className="flex flex-col gap-4 sm:flex-row sm:justify-center"
           >
             <Button
               variant="outline"
               size="lg"
-              className="group relative overflow-hidden border-2 border-gold bg-transparent px-10 py-6 text-lg font-semibold text-white transition-all duration-500 hover:bg-gold hover:text-white"
+              className="group relative overflow-hidden border-2 border-gold bg-transparent px-10 py-6 text-lg font-semibold text-white transition-all duration-500 hover:bg-gold hover:text-white hover:shadow-[0_0_30px_rgba(212,175,55,0.6)]"
+              style={{
+                boxShadow: '0 0 20px rgba(212, 175, 55, 0.3), 0 4px 15px rgba(0, 0, 0, 0.5)'
+              }}
               onClick={() => {
                 const inquireSection = document.getElementById("inquire");
                 inquireSection?.scrollIntoView({ behavior: "smooth" });
@@ -89,6 +107,28 @@ export default function Hero() {
             >
               Book a Consultation
             </Button>
+            <Link href="/packages">
+              <Button
+                size="lg"
+                className="border-2 border-gold bg-gold px-10 py-6 text-lg font-semibold transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.7)] hover:scale-105"
+                style={{
+                  background: 'linear-gradient(135deg, #D4AF37 0%, #F4E5B8 50%, #D4AF37 100%)',
+                  boxShadow: '0 0 25px rgba(212, 175, 55, 0.5), 0 4px 20px rgba(0, 0, 0, 0.6)'
+                }}
+              >
+                <span
+                  style={{
+                    background: 'linear-gradient(135deg, #FFFFFF 20%, #FFF8DC 50%, #FFFFFF 80%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  View Our Packages
+                </span>
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
 

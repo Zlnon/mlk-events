@@ -27,7 +27,7 @@ function PortfolioItem({ title, image, category, index }: PortfolioItemProps) {
       onMouseLeave={() => setIsHovered(false)}
       style={{ breakInside: "avoid" }}
     >
-      <div className="relative aspect-[4/5] overflow-hidden">
+      <div className="relative aspect-4/5 overflow-hidden">
         {/* Image with B&W to Color effect */}
         <Image
           src={image}
@@ -53,7 +53,7 @@ function PortfolioItem({ title, image, category, index }: PortfolioItemProps) {
 
         {/* Overlay */}
         <div
-          className={`absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-transparent transition-opacity duration-500 ${
+          className={`absolute inset-0 bg-linear-to-t from-charcoal via-charcoal/50 to-transparent transition-opacity duration-500 ${
             isHovered ? "opacity-80" : "opacity-40"
           }`}
         />
@@ -134,22 +134,22 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="relative overflow-hidden bg-porcelain py-24 md:py-32"
+      className="relative overflow-hidden bg-porcelain py-16 md:py-24 lg:py-32"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 md:px-10 lg:px-16">
         {/* Section Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="mb-16 w-full text-center"
+          className="mb-16 text-center"
         >
           <motion.p
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-4 w-full text-sm font-medium tracking-[0.3em] text-gold uppercase"
+            className="mb-6 text-sm font-medium tracking-[0.3em] text-gold uppercase"
           >
             Our Work
           </motion.p>
@@ -157,7 +157,7 @@ export default function Portfolio() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="w-full font-serif text-4xl font-bold text-charcoal md:text-5xl lg:text-6xl"
+            className="mb-6 font-serif text-4xl font-bold leading-[1.2] text-charcoal md:text-5xl lg:text-6xl"
           >
             Moments We've Made Magic
           </motion.h2>
@@ -165,7 +165,7 @@ export default function Portfolio() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mx-auto mt-4 w-full max-w-2xl text-lg text-charcoal/70"
+            className="mx-auto max-w-2xl text-lg leading-[1.6] text-charcoal/70"
           >
             Hover over each image to see the beauty in full color
           </motion.p>
