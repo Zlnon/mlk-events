@@ -65,7 +65,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-8 font-serif text-5xl font-bold leading-[1.1] md:text-7xl lg:text-8xl"
+            className="mb-8 font-serif text-5xl font-bold leading-[1.1] md:text-7xl lg:text-8xl relative"
             style={{
               background: 'linear-gradient(135deg, #FFFFFF 0%, #D4AF37 40%, #FFFFFF 70%, #D4AF37 100%)',
               WebkitBackgroundClip: 'text',
@@ -77,6 +77,12 @@ export default function Hero() {
             We Create Magic.
             <br />
             You Live the Moment.
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent shimmer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 0.5, 0] }}
+              transition={{ duration: 3, repeat: Infinity, repeatDelay: 5 }}
+            />
           </motion.h1>
 
           {/* Subtitle */}

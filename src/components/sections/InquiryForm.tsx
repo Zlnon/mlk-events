@@ -71,21 +71,39 @@ export default function InquiryForm() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="mb-16 text-center"
+          className="mb-20 text-center"
         >
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-6 flex items-center justify-center gap-3"
+          >
+            <div className="h-px w-8 bg-gradient-to-r from-transparent to-gold/40" />
+            <p className="text-sm font-medium tracking-[0.3em] text-gold uppercase">
+              Get In Touch
+            </p>
+            <div className="h-px w-8 bg-gradient-to-l from-transparent to-gold/40" />
+          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-6 font-serif text-4xl font-bold leading-[1.2] text-charcoal md:text-5xl lg:text-6xl"
           >
             Let's Create Something Beautiful
           </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mx-auto mb-6 h-px w-32 bg-gradient-to-r from-transparent via-gold to-transparent"
+          />
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mx-auto max-w-2xl text-lg leading-[1.6] text-charcoal/70"
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mx-auto max-w-2xl text-lg leading-[1.85] text-charcoal/80 tracking-elegant"
           >
             We're so excited to hear about your event. Please share a few
             details, and we'll be in touch to schedule your complimentary
@@ -102,7 +120,7 @@ export default function InquiryForm() {
         >
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="space-y-6 rounded-2xl bg-white p-8 shadow-xl md:p-12"
+            className="space-y-6 rounded-2xl glass p-8 shadow-2xl border border-gold/10 md:p-12 hover-glow transition-all duration-500"
           >
             {/* Success Message */}
             {isSuccess && (
