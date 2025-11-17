@@ -47,7 +47,7 @@ function ServiceCard({ title, icon, details, delay }: ServiceCardProps) {
             {title}
           </h3>
           <div className="mt-4 h-px w-16 bg-gradient-to-r from-transparent via-gold to-transparent" />
-          <p className="mt-4 text-xs tracking-[0.2em] text-charcoal/50 uppercase">Hover to explore</p>
+          <p className="mt-4 text-xs tracking-[0.2em] text-charcoal/50 uppercase hidden md:block">Hover to explore</p>
         </Card>
 
         {/* Back of Card */}

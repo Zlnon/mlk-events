@@ -98,11 +98,9 @@ export default function Hero() {
             <Link href="/packages">
               <Button
                 size="lg"
-                className="border-2 border-gold bg-gold px-10 py-6 text-lg font-semibold transition-all duration-300 hover:shadow-[0_0_40px_rgba(212,175,55,0.7)] hover:scale-105"
+                className="border-2 border-gold bg-gold px-10 py-6 text-lg font-semibold text-white transition-all duration-300 hover:bg-gold-dark hover:border-gold-dark hover:shadow-[0_0_30px_rgba(212,175,55,0.6)]"
               >
-                <span className="text-gradient-gold">
-                  View Our Packages
-                </span>
+                View Our Packages
               </Button>
             </Link>
           </motion.div>
