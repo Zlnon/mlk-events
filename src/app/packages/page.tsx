@@ -169,8 +169,7 @@ export default function PackagesPage() {
                     </div>
                     <Link href="/#inquire">
                       <Button
-                        variant={pkg.highlight ? "gold" : "outline"}
-                        className="mt-6 w-full"
+                        className={`mt-6 w-full text-white ${pkg.highlight ? "btn-metallic-gold" : "btn-glass-gold"}`}
                       >
                         Inquire Now
                       </Button>
@@ -211,7 +210,7 @@ export default function PackagesPage() {
             </div>
             <div className="mt-12">
               <Link href="/#inquire">
-                <Button variant="gold" size="lg">
+                <Button size="lg" className="btn-metallic-gold text-white">
                   Discuss Custom Options
                 </Button>
               </Link>
@@ -231,7 +230,7 @@ export default function PackagesPage() {
             discuss your vision and find the perfect fit.
           </p>
           <Link href="/#inquire">
-            <Button variant="gold" size="lg">
+            <Button size="lg" className="btn-metallic-gold text-white">
               Book a Free Consultation
             </Button>
           </Link>

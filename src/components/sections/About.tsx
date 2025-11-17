@@ -27,10 +27,10 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <p className="mb-4 text-sm font-medium tracking-[0.25em] text-gold/70 uppercase">About Us</p>
-              <h2 className="mb-6 font-serif text-4xl font-bold leading-[1.2] text-gold md:text-5xl lg:text-6xl">
+              <h2 className="mb-6 font-serif text-4xl font-bold leading-[1.2] text-gold md:text-5xl lg:text-6xl text-shadow-gold">
                 The Art of Celebration.
               </h2>
-              <div className="mb-8 h-px w-24 bg-gradient-to-r from-gold to-transparent" />
+              <div className="mb-8 h-px w-24 bg-gradient-to-r from-gold to-transparent divider-glow" />
             </motion.div>
 
             <motion.div
@@ -60,8 +60,8 @@ export default function About() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="mt-8"
             >
-              <p className="font-script text-5xl text-gold">M.L.K.</p>
-              <p className="mt-2 text-sm text-charcoal/60">Founder, MLKs Events</p>
+              <p className="font-script text-5xl text-gold text-shadow-gold">M.L.K.</p>
+              <p className="mt-2 text-sm text-charcoal/60 tracking-elegant">Founder, MLKs Events</p>
             </motion.div>
           </motion.div>
 
