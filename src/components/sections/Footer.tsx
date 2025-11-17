@@ -208,8 +208,7 @@ export default function Footer() {
               />
               <Button
                 type="submit"
-                variant="gold"
-                className="w-full"
+                className="btn-metallic-gold w-full text-white"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Subscribing..." : "Subscribe"}

@@ -322,9 +322,8 @@ export default function InquiryForm() {
             {/* Submit Button */}
             <Button
               type="submit"
-              variant="gold"
               size="lg"
-              className="w-full"
+              className="btn-metallic-gold w-full text-white"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Submitting..." : "Submit Inquiry"}

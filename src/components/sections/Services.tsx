@@ -47,7 +47,7 @@ function ServiceCard({ title, icon, details, delay }: ServiceCardProps) {
             {title}
           </h3>
           <div className="mt-4 h-px w-16 bg-gradient-to-r from-transparent via-gold to-transparent" />
-          <p className="mt-4 text-xs tracking-[0.2em] text-charcoal/50 uppercase">Hover to explore</p>
+          <p className="mt-4 text-xs tracking-[0.2em] text-charcoal/50 uppercase hidden md:block">Hover to explore</p>
         </Card>
 
         {/* Back of Card */}
@@ -186,23 +186,9 @@ export default function Services() {
           <Link href="/packages">
             <Button
               size="lg"
-              className="mb-6 px-10 py-6 text-lg font-semibold transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] hover:scale-105"
-              style={{
-                background: 'linear-gradient(135deg, #D4AF37 0%, #F4E5B8 50%, #D4AF37 100%)',
-                boxShadow: '0 0 20px rgba(212, 175, 55, 0.4), 0 4px 15px rgba(0, 0, 0, 0.3)'
-              }}
+              className="btn-metallic-gold mb-6 px-10 py-6 text-lg font-semibold text-white"
             >
-              <span
-                style={{
-                  background: 'linear-gradient(135deg, #FFFFFF 20%, #FFF8DC 50%, #FFFFFF 80%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  fontWeight: 'bold'
-                }}
-              >
-                View Our Packages
-              </span>
+              View Our Packages
             </Button>
           </Link>
           <p className="text-lg leading-[1.6] text-charcoal/70">
