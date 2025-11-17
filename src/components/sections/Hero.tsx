@@ -42,17 +42,23 @@ export default function Hero() {
           className="w-full max-w-5xl"
         >
           {/* Eyebrow Text */}
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-6 text-sm font-medium tracking-[0.3em] text-gold uppercase"
-            style={{
-              textShadow: '0 0 20px rgba(212, 175, 55, 0.8), 0 0 40px rgba(212, 175, 55, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)'
-            }}
+            className="mb-8 flex items-center justify-center gap-4"
           >
-            EST. 2025 • DOHA, QATAR
-          </motion.p>
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold/50" />
+            <p
+              className="text-sm font-medium tracking-[0.3em] text-gold uppercase"
+              style={{
+                textShadow: '0 0 20px rgba(212, 175, 55, 0.8), 0 0 40px rgba(212, 175, 55, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)'
+              }}
+            >
+              EST. 2025 • DOHA, QATAR
+            </p>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/50" />
+          </motion.div>
 
           {/* Main Title */}
           <motion.h1

@@ -21,22 +21,25 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="order-2 lg:order-1"
           >
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-8 font-serif text-4xl font-bold leading-[1.2] text-gold md:text-5xl lg:text-6xl"
             >
-              The Art of Celebration.
-            </motion.h2>
+              <p className="mb-4 text-sm font-medium tracking-[0.25em] text-gold/70 uppercase">About Us</p>
+              <h2 className="mb-6 font-serif text-4xl font-bold leading-[1.2] text-gold md:text-5xl lg:text-6xl">
+                The Art of Celebration.
+              </h2>
+              <div className="mb-8 h-px w-24 bg-gradient-to-r from-gold to-transparent" />
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-6 text-lg leading-[1.75] text-charcoal"
+              className="space-y-6 text-lg leading-[1.85] text-charcoal/90 tracking-elegant"
             >
-              <p>
+              <p className="first-letter:font-serif first-letter:text-5xl first-letter:font-bold first-letter:text-gold first-letter:mr-1 first-letter:float-left first-letter:leading-[0.9]">
                 Planning an event shouldn't feel like work. At MLKs Events, we
                 believe in the power of moments. We handle the chaos, the
                 contracts, and the countless details so you can focus on the

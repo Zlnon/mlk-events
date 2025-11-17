@@ -27,10 +27,11 @@ function ProcessStep({ icon, title, description, index }: ProcessStepProps) {
       <motion.div
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : { scale: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
-        className="relative z-10 mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-blush shadow-lg"
+        transition={{ duration: 0.5, delay: index * 0.2 + 0.3, type: "spring" }}
+        className="relative z-10 mb-6 flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-blush via-blush/80 to-blush/60 shadow-lg hover-lift"
       >
-        <div className="text-gold">{icon}</div>
+        <div className="absolute inset-2 rounded-full bg-white/40" />
+        <div className="relative text-gold">{icon}</div>
       </motion.div>
 
       {/* Step Number */}
@@ -38,9 +39,13 @@ function ProcessStep({ icon, title, description, index }: ProcessStepProps) {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.4, delay: index * 0.2 + 0.5 }}
-        className="mb-3 font-serif text-sm font-bold text-gold"
+        className="mb-3 flex items-center gap-2"
       >
-        Step {index + 1}
+        <div className="h-px w-6 bg-gradient-to-r from-transparent to-gold/40" />
+        <span className="font-serif text-sm font-bold tracking-[0.2em] text-gold uppercase">
+          Step {index + 1}
+        </span>
+        <div className="h-px w-6 bg-gradient-to-l from-transparent to-gold/40" />
       </motion.div>
 
       {/* Title */}
@@ -48,7 +53,7 @@ function ProcessStep({ icon, title, description, index }: ProcessStepProps) {
         initial={{ opacity: 0, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
         transition={{ duration: 0.4, delay: index * 0.2 + 0.6 }}
-        className="mb-3 font-serif text-2xl font-bold text-charcoal"
+        className="mb-4 font-serif text-2xl font-bold text-charcoal"
       >
         {title}
       </motion.h3>
@@ -58,7 +63,7 @@ function ProcessStep({ icon, title, description, index }: ProcessStepProps) {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.4, delay: index * 0.2 + 0.7 }}
-        className="max-w-xs leading-[1.6] text-charcoal/70"
+        className="max-w-xs leading-[1.75] text-charcoal/75 tracking-elegant"
       >
         {description}
       </motion.p>
@@ -115,16 +120,20 @@ export default function Process() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="mb-16 text-center"
+          className="mb-20 text-center"
         >
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-6 text-sm font-medium tracking-[0.3em] text-gold uppercase"
+            className="mb-6 flex items-center justify-center gap-3"
           >
-            Our Process
-          </motion.p>
+            <div className="h-px w-8 bg-gradient-to-r from-transparent to-gold/40" />
+            <p className="text-sm font-medium tracking-[0.3em] text-gold uppercase">
+              Our Process
+            </p>
+            <div className="h-px w-8 bg-gradient-to-l from-transparent to-gold/40" />
+          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -133,11 +142,17 @@ export default function Process() {
           >
             From Vision to Reality
           </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mx-auto mb-6 h-px w-32 bg-gradient-to-r from-transparent via-gold to-transparent"
+          />
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mx-auto max-w-2xl text-lg leading-[1.6] text-charcoal/70"
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mx-auto max-w-2xl text-lg leading-[1.85] text-charcoal/80 tracking-elegant"
           >
             Our proven process ensures a seamless journey from your first
             consultation to your flawless celebration
