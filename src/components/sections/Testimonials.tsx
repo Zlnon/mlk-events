@@ -90,7 +90,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative overflow-hidden bg-gradient-to-br from-charcoal via-charcoal/95 to-gold/20 py-24 md:py-32"
+      className="relative overflow-hidden bg-linear-to-br from-charcoal via-charcoal/95 to-gold/20 py-24 md:py-32"
     >
       <div className="container relative z-10 mx-auto px-4">
         {/* Section Header */}

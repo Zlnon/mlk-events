@@ -110,7 +110,7 @@ export default function About() {
                     priority
                   />
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-charcoal/20 to-transparent" />
                 </div>
               </motion.div>
 

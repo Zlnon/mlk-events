@@ -62,7 +62,7 @@ export default function InquiryForm() {
   return (
     <section
       id="inquire"
-      className="relative overflow-hidden bg-gradient-to-b from-porcelain to-blush/20 py-24 md:py-32"
+      className="relative overflow-hidden bg-linear-to-b from-porcelain to-blush/20 py-24 md:py-32"
     >
       <div className="container mx-auto px-4">
         {/* Section Header */}
