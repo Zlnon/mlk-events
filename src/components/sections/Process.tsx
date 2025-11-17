@@ -119,13 +119,13 @@ export default function Process() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="mb-20 text-center"
+          className="mb-20 w-full text-center"
         >
           <motion.p
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-4 text-sm font-medium tracking-[0.3em] text-gold uppercase"
+            className="mb-4 w-full text-sm font-medium tracking-[0.3em] text-gold uppercase"
           >
             Our Process
           </motion.p>
@@ -133,7 +133,7 @@ export default function Process() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="font-serif text-4xl font-bold text-charcoal md:text-5xl lg:text-6xl"
+            className="w-full font-serif text-4xl font-bold text-charcoal md:text-5xl lg:text-6xl"
           >
             From Vision to Reality
           </motion.h2>
@@ -141,7 +141,7 @@ export default function Process() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mx-auto mt-4 max-w-2xl text-lg text-charcoal/70"
+            className="mx-auto mt-4 w-full max-w-2xl text-lg text-charcoal/70"
           >
             Our proven process ensures a seamless journey from your first
             consultation to your flawless celebration

@@ -38,14 +38,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-5xl"
+          className="w-full max-w-5xl"
         >
           {/* Eyebrow Text */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-6 text-sm font-medium tracking-[0.3em] text-gold uppercase"
+            className="mb-6 w-full text-sm font-medium tracking-[0.3em] text-gold uppercase"
           >
             EST. 2025 • DOHA, QATAR
           </motion.p>
@@ -55,7 +55,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-6 font-serif text-5xl font-bold leading-tight text-white md:text-7xl lg:text-8xl"
+            className="mb-6 w-full font-serif text-5xl font-bold leading-tight text-white md:text-7xl lg:text-8xl"
           >
             We Create Magic.
             <br />
@@ -67,7 +67,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mb-10 text-lg text-white/90 md:text-xl lg:text-2xl"
+            className="mb-10 w-full text-lg text-white/90 md:text-xl lg:text-2xl"
           >
             MLKs Events: Bespoke Wedding & Event Planning.
           </motion.p>
