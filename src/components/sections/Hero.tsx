@@ -85,9 +85,8 @@ export default function Hero() {
             className="flex flex-col gap-4 sm:flex-row sm:justify-center"
           >
             <Button
-              variant="outline"
               size="lg"
-              className="group relative overflow-hidden border-2 border-gold bg-transparent px-10 py-6 text-lg font-semibold text-white transition-all duration-300 hover:bg-gold hover:text-white hover:shadow-[0_0_30px_rgba(212,175,55,0.6)]"
+              className="btn-glass-gold px-10 py-6 text-lg font-semibold text-white"
               onClick={() => {
                 const inquireSection = document.getElementById("inquire");
                 inquireSection?.scrollIntoView({ behavior: "smooth" });
@@ -98,7 +97,7 @@ export default function Hero() {
             <Link href="/packages">
               <Button
                 size="lg"
-                className="border-2 border-gold bg-gold px-10 py-6 text-lg font-semibold text-white transition-all duration-300 hover:bg-gold-dark hover:border-gold-dark hover:shadow-[0_0_30px_rgba(212,175,55,0.6)]"
+                className="btn-metallic-gold px-10 py-6 text-lg font-semibold text-white"
               >
                 View Our Packages
               </Button>
@@ -111,7 +110,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.4 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer group"
           onClick={scrollToNextSection}
         >
           <motion.div
@@ -119,8 +118,14 @@ export default function Hero() {
             transition={{ duration: 1.5, repeat: Infinity }}
             className="flex flex-col items-center"
           >
-            <ChevronDown className="h-8 w-8 text-white/80" />
-            <span className="mt-2 text-sm text-white/60">Scroll to explore</span>
+            <motion.div
+              className="relative"
+              whileHover={{ scale: 1.1 }}
+            >
+              <div className="absolute inset-0 rounded-full bg-gold/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <ChevronDown className="h-8 w-8 text-white/80 group-hover:text-gold transition-colors relative" />
+            </motion.div>
+            <span className="mt-2 text-sm text-white/60 group-hover:text-gold/80 transition-colors">Scroll to explore</span>
           </motion.div>
         </motion.div>
       </div>

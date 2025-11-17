@@ -22,7 +22,7 @@ function PortfolioItem({ title, image, category, index }: PortfolioItemProps) {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-500"
+      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl hover:shadow-gold/20 transition-all duration-500"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{ breakInside: "avoid" }}
@@ -68,10 +68,10 @@ function PortfolioItem({ title, image, category, index }: PortfolioItemProps) {
           transition={{ duration: 0.4 }}
           className="absolute bottom-0 left-0 right-0 p-6 text-white"
         >
-          <p className="mb-2 text-sm font-medium tracking-wider text-gold uppercase">
+          <p className="mb-2 text-sm font-medium tracking-wider text-gold uppercase text-shadow-gold">
             {category}
           </p>
-          <h3 className="font-serif text-2xl font-bold">{title}</h3>
+          <h3 className="font-serif text-2xl font-bold text-shadow-elegant">{title}</h3>
         </motion.div>
       </div>
     </motion.div>
