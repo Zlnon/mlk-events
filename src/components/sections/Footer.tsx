@@ -31,9 +31,12 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-charcoal text-white">
+    <footer className="relative overflow-hidden bg-gradient-to-b from-charcoal to-[#2a2a2a] text-white">
+      {/* Decorative Top Border */}
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent opacity-30" />
+
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Logo & Mission */}
           <motion.div
@@ -42,19 +45,20 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="mb-4">
-              <h3 className="font-script text-4xl text-gold">MLKs Events</h3>
+            <div className="mb-6">
+              <h3 className="font-script text-5xl text-gold mb-2">MLKs Events</h3>
+              <div className="h-px w-20 bg-gradient-to-r from-gold to-transparent" />
             </div>
-            <p className="text-sm leading-relaxed text-white/70">
+            <p className="text-sm leading-[1.75] text-white/75 tracking-elegant">
               Creating unforgettable moments through meticulous planning and
               elegant design. Your celebration, perfected.
             </p>
-            <div className="mt-6 flex gap-4">
+            <div className="mt-8 flex gap-3">
               <a
                 href="https://instagram.com/mlksevents"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-gold"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all hover:bg-gold hover:scale-110 hover:shadow-lg"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
@@ -63,14 +67,14 @@ export default function Footer() {
                 href="https://facebook.com/mlksevents"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-gold"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all hover:bg-gold hover:scale-110 hover:shadow-lg"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="mailto:info@mlksevents.com"
-                className="transition-colors hover:text-gold"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all hover:bg-gold hover:scale-110 hover:shadow-lg"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
@@ -85,9 +89,12 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h4 className="mb-6 font-serif text-lg font-bold text-gold">
-              Navigate
-            </h4>
+            <div className="mb-6">
+              <h4 className="font-serif text-lg font-bold text-gold mb-2">
+                Navigate
+              </h4>
+              <div className="h-px w-16 bg-gradient-to-r from-gold/50 to-transparent" />
+            </div>
             <ul className="space-y-3 text-sm">
               <li>
                 <a
@@ -147,10 +154,13 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="mb-6 font-serif text-lg font-bold text-gold">
-              Follow
-            </h4>
-            <p className="mb-4 text-sm text-white/70">See Our Latest Work</p>
+            <div className="mb-6">
+              <h4 className="font-serif text-lg font-bold text-gold mb-2">
+                Follow
+              </h4>
+              <div className="h-px w-16 bg-gradient-to-r from-gold/50 to-transparent" />
+            </div>
+            <p className="mb-4 text-sm text-white/75 tracking-elegant">See Our Latest Work</p>
             <div className="grid grid-cols-2 gap-2">
               {instagramImages.map((image, index) => (
                 <a
@@ -180,10 +190,13 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h4 className="mb-6 font-serif text-lg font-bold text-gold">
-              Connect
-            </h4>
-            <p className="mb-4 text-sm text-white/70">Join the Guest List</p>
+            <div className="mb-6">
+              <h4 className="font-serif text-lg font-bold text-gold mb-2">
+                Connect
+              </h4>
+              <div className="h-px w-16 bg-gradient-to-r from-gold/50 to-transparent" />
+            </div>
+            <p className="mb-4 text-sm text-white/75 tracking-elegant">Join the Guest List</p>
             <form onSubmit={handleNewsletterSubmit} className="space-y-3">
               <Input
                 type="email"

@@ -22,7 +22,7 @@ function PortfolioItem({ title, image, category, index }: PortfolioItemProps) {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-md"
+      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-500"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{ breakInside: "avoid" }}
@@ -143,16 +143,20 @@ export default function Portfolio() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="mb-16 text-center"
+          className="mb-20 text-center"
         >
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-6 text-sm font-medium tracking-[0.3em] text-gold uppercase"
+            className="mb-6 flex items-center justify-center gap-3"
           >
-            Our Work
-          </motion.p>
+            <div className="h-px w-8 bg-gradient-to-r from-transparent to-gold/40" />
+            <p className="text-sm font-medium tracking-[0.3em] text-gold uppercase">
+              Our Work
+            </p>
+            <div className="h-px w-8 bg-gradient-to-l from-transparent to-gold/40" />
+          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -161,11 +165,17 @@ export default function Portfolio() {
           >
             Moments We've Made Magic
           </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mx-auto mb-6 h-px w-32 bg-gradient-to-r from-transparent via-gold to-transparent"
+          />
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mx-auto max-w-2xl text-lg leading-[1.6] text-charcoal/70"
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mx-auto max-w-2xl text-lg leading-[1.85] text-charcoal/80 tracking-elegant"
           >
             Hover over each image to see the beauty in full color
           </motion.p>

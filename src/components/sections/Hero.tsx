@@ -42,24 +42,30 @@ export default function Hero() {
           className="w-full max-w-5xl"
         >
           {/* Eyebrow Text */}
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-6 text-sm font-medium tracking-[0.3em] text-gold uppercase"
-            style={{
-              textShadow: '0 0 20px rgba(212, 175, 55, 0.8), 0 0 40px rgba(212, 175, 55, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)'
-            }}
+            className="mb-8 flex items-center justify-center gap-4"
           >
-            EST. 2025 • DOHA, QATAR
-          </motion.p>
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold/50" />
+            <p
+              className="text-sm font-medium tracking-[0.3em] text-gold uppercase"
+              style={{
+                textShadow: '0 0 20px rgba(212, 175, 55, 0.8), 0 0 40px rgba(212, 175, 55, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)'
+              }}
+            >
+              EST. 2025 • DOHA, QATAR
+            </p>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/50" />
+          </motion.div>
 
           {/* Main Title */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-8 font-serif text-5xl font-bold leading-[1.1] md:text-7xl lg:text-8xl"
+            className="mb-8 font-serif text-5xl font-bold leading-[1.1] md:text-7xl lg:text-8xl relative"
             style={{
               background: 'linear-gradient(135deg, #FFFFFF 0%, #D4AF37 40%, #FFFFFF 70%, #D4AF37 100%)',
               WebkitBackgroundClip: 'text',
@@ -71,6 +77,12 @@ export default function Hero() {
             We Create Magic.
             <br />
             You Live the Moment.
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent shimmer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 0.5, 0] }}
+              transition={{ duration: 3, repeat: Infinity, repeatDelay: 5 }}
+            />
           </motion.h1>
 
           {/* Subtitle */}

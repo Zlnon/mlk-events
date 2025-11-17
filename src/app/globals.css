@@ -8,6 +8,12 @@
   --champagne-gold: #D4AF37;
   --deep-charcoal: #333333;
 
+  /* Elegant Variations */
+  --cream: #FFF8F0;
+  --rose-light: #FFF0F3;
+  --gold-light: #F4E5B8;
+  --gold-dark: #B8941F;
+
   /* Theme Variables */
   --background: var(--porcelain-white);
   --foreground: var(--deep-charcoal);
@@ -19,6 +25,10 @@
   --color-blush: #FADADD;
   --color-gold: #D4AF37;
   --color-charcoal: #333333;
+  --color-cream: #FFF8F0;
+  --color-rose-light: #FFF0F3;
+  --color-gold-light: #F4E5B8;
+  --color-gold-dark: #B8941F;
 
   /* Typography - MLKs Events Brand Fonts */
   --font-serif: "Playfair Display", Georgia, serif;
@@ -36,10 +46,13 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.01em;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 /* Custom Utilities */
@@ -67,10 +80,247 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--deep-charcoal);
 }
 
+.bg-cream {
+  background-color: var(--cream);
+}
+
+.bg-rose-light {
+  background-color: var(--rose-light);
+}
+
 .font-serif {
   font-family: var(--font-serif);
 }
 
 .font-script {
   font-family: var(--font-script);
+}
+
+/* Elegant Dividers */
+.elegant-divider {
+  position: relative;
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 200px;
+}
+
+.elegant-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--champagne-gold), transparent);
+  opacity: 0.3;
+}
+
+.elegant-divider-center {
+  position: relative;
+  display: inline-block;
+  padding: 0 1.5rem;
+  background: var(--porcelain-white);
+  color: var(--champagne-gold);
+  font-size: 1.5rem;
+}
+
+/* Luxury Text Shadows */
+.text-shadow-elegant {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.text-shadow-gold {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Smooth Transitions */
+.transition-elegant {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Lift Effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Luxury Card Styles */
+.card-elegant {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FAFAFA 100%);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.card-elegant:hover {
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* Subtle Ornament */
+.ornament {
+  display: inline-block;
+  font-family: var(--font-script);
+  color: var(--champagne-gold);
+  opacity: 0.6;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+}
+
+/* Letter Spacing for Elegance */
+.tracking-luxury {
+  letter-spacing: 0.15em;
+}
+
+.tracking-elegant {
+  letter-spacing: 0.05em;
+}
+
+/* Glassmorphism Effects */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-dark {
+  background: rgba(51, 51, 51, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-gold {
+  background: rgba(212, 175, 55, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--porcelain-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--champagne-gold), var(--gold-dark));
+  border-radius: 6px;
+  border: 2px solid var(--porcelain-white);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--champagne-gold);
+}
+
+/* Selection Color */
+::selection {
+  background-color: rgba(212, 175, 55, 0.3);
+  color: var(--deep-charcoal);
+}
+
+::-moz-selection {
+  background-color: rgba(212, 175, 55, 0.3);
+  color: var(--deep-charcoal);
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 3s infinite linear;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.2) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+}
+
+/* Pulse Glow */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Ripple Effect */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: rgba(212, 175, 55, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s ease-out;
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Sophisticated Hover Effects */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
 }

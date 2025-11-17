@@ -37,16 +37,17 @@ function ServiceCard({ title, icon, details, delay }: ServiceCardProps) {
       >
         {/* Front of Card */}
         <Card
-          className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center shadow-lg"
+          className="card-elegant absolute inset-0 flex flex-col items-center justify-center p-8 text-center"
           style={{ backfaceVisibility: "hidden" }}
         >
-          <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-gold/10">
+          <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-gold/20 to-gold/5 shadow-inner">
             <div className="text-gold">{icon}</div>
           </div>
-          <h3 className="font-serif text-2xl font-bold text-charcoal md:text-3xl">
+          <h3 className="font-serif text-2xl font-bold text-charcoal md:text-3xl tracking-tight">
             {title}
           </h3>
-          <p className="mt-4 text-sm text-charcoal/60">Hover to learn more</p>
+          <div className="mt-4 h-px w-16 bg-gradient-to-r from-transparent via-gold to-transparent" />
+          <p className="mt-4 text-xs tracking-[0.2em] text-charcoal/50 uppercase">Hover to explore</p>
         </Card>
 
         {/* Back of Card */}
@@ -132,16 +133,20 @@ export default function Services() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="mb-16 text-center"
+          className="mb-20 text-center"
         >
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-6 text-sm font-medium tracking-[0.3em] text-gold uppercase"
+            className="mb-6 flex items-center justify-center gap-3"
           >
-            Our Services
-          </motion.p>
+            <div className="h-px w-8 bg-gradient-to-r from-transparent to-gold/40" />
+            <p className="text-sm font-medium tracking-[0.3em] text-gold uppercase">
+              Our Services
+            </p>
+            <div className="h-px w-8 bg-gradient-to-l from-transparent to-gold/40" />
+          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -150,6 +155,12 @@ export default function Services() {
           >
             How We Bring Your Vision to Life
           </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="mx-auto mt-8 h-px w-32 bg-gradient-to-r from-transparent via-gold to-transparent"
+          />
         </motion.div>
 
         {/* Service Cards */}
