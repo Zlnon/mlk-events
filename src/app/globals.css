@@ -1,0 +1,120 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+
+:root {
+  /* MLKs Events Brand Colors */
+  --porcelain-white: #FAFAFA;
+  --blush-rose: #FADADD;
+  --champagne-gold: #D4AF37;
+  --deep-charcoal: #333333;
+
+  /* Theme Variables */
+  --background: var(--porcelain-white);
+  --foreground: var(--deep-charcoal);
+}
+
+@theme inline {
+  /* Brand Colors */
+  --color-porcelain: #FAFAFA;
+  --color-blush: #FADADD;
+  --color-gold: #D4AF37;
+  --color-charcoal: #333333;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Typography - MLKs Events Brand Fonts */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-script: "Great Vibes", cursive;
+
+  /* Extended Color Palette */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* Spacing & Layout */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--deep-charcoal);
+}
+
+/* Custom Utilities */
+.text-gold {
+  color: var(--champagne-gold);
+}
+
+.bg-gold {
+  background-color: var(--champagne-gold);
+}
+
+.text-blush {
+  color: var(--blush-rose);
+}
+
+.bg-blush {
+  background-color: var(--blush-rose);
+}
+
+.text-charcoal {
+  color: var(--deep-charcoal);
+}
+
+.bg-charcoal {
+  background-color: var(--deep-charcoal);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
