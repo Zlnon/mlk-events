@@ -29,6 +29,17 @@ export default function StickyNavigation() {
     { label: "Contact", href: "#inquire" },
   ];
 
+  const handleMobileNavClick = (href: string) => {
+    const sectionId = href.replace('#', '');
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      // Close menu after a short delay to allow scroll to start
+      setTimeout(() => setIsMobileMenuOpen(false), 300);
+    }
+  };
+
   if (!isVisible) return null;
 
   return (
@@ -62,7 +73,7 @@ export default function StickyNavigation() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-2 text-sm font-semibold text-white bg-gold rounded-md shadow-md hover:shadow-lg transition-all duration-300"
+                className="btn-metallic-gold px-6 py-2 text-sm font-semibold text-white rounded-md"
               >
                 Packages
               </motion.button>
@@ -105,17 +116,16 @@ export default function StickyNavigation() {
             >
               <div className="py-6 space-y-4">
                 {navItems.map((item, index) => (
-                  <motion.a
+                  <motion.button
                     key={item.href}
-                    href={item.href}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-base font-medium text-charcoal hover:text-gold transition-colors px-6 py-2"
+                    onClick={() => handleMobileNavClick(item.href)}
+                    className="block w-full text-left text-base font-medium text-charcoal hover:text-gold transition-colors px-6 py-2"
                   >
                     {item.label}
-                  </motion.a>
+                  </motion.button>
                 ))}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -124,7 +134,7 @@ export default function StickyNavigation() {
                   className="px-6 pt-2"
                 >
                   <Link href="/packages" onClick={() => setIsMobileMenuOpen(false)}>
-                    <button className="w-full px-6 py-3 text-sm font-semibold text-white bg-gold rounded-md shadow-md hover:shadow-lg transition-all duration-300">
+                    <button className="btn-metallic-gold w-full px-6 py-3 text-sm font-semibold text-white rounded-md">
                       Packages
                     </button>
                   </Link>
