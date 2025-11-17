@@ -90,7 +90,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative overflow-hidden bg-linear-to-br from-charcoal via-charcoal/95 to-gold/20 py-16 md:py-24 lg:py-32"
+      className="relative overflow-hidden bg-linear-to-br from-charcoal/90 via-charcoal/85 to-gold/20 py-16 md:py-24 lg:py-32"
     >
       <div className="container relative z-10 mx-auto px-6 md:px-10 lg:px-16">
         {/* Section Header */}
@@ -131,9 +131,9 @@ export default function Testimonials() {
 
         {/* Carousel */}
         <div className="relative mx-auto max-w-5xl">
-          {/* Giant Quote Mark Background */}
-          <div className="pointer-events-none absolute left-0 top-0 -translate-x-8 -translate-y-8 select-none opacity-10 md:-translate-x-16 md:-translate-y-12">
-            <Quote className="h-48 w-48 text-white md:h-64 md:w-64" strokeWidth={1} />
+          {/* Quote Mark Background */}
+          <div className="pointer-events-none absolute left-0 top-0 -translate-x-4 -translate-y-4 select-none opacity-10 md:-translate-x-8 md:-translate-y-6">
+            <Quote className="h-24 w-24 text-white md:h-32 md:w-32" strokeWidth={1} />
           </div>
 
           {/* Testimonial Slider */}
@@ -169,10 +169,10 @@ export default function Testimonials() {
                     "{testimonials[currentIndex].quote}"
                   </blockquote>
                   <div className="mt-8">
-                    <p className="mb-2 text-xl font-semibold text-gold md:text-2xl" style={{ textShadow: '0 2px 10px rgba(212, 175, 55, 0.5)' }}>
+                    <p className="mb-2 text-xl font-semibold text-gold md:text-2xl text-shadow-gold">
                       {testimonials[currentIndex].author}
                     </p>
-                    <p className="text-base text-white/90 md:text-lg" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}>
+                    <p className="text-base text-white/90 md:text-lg text-shadow-elegant">
                       {testimonials[currentIndex].event}
                     </p>
                   </div>

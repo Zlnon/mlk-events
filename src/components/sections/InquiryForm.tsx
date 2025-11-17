@@ -120,7 +120,7 @@ export default function InquiryForm() {
         >
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="space-y-6 rounded-2xl glass p-8 shadow-2xl border border-gold/10 md:p-12 hover-glow transition-all duration-500"
+            className="space-y-8 rounded-2xl bg-white/90 p-8 shadow-lg border border-gold/20 md:p-12 transition-all duration-300 hover:shadow-xl"
           >
             {/* Success Message */}
             {isSuccess && (
@@ -334,8 +334,8 @@ export default function InquiryForm() {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute right-0 top-20 h-96 w-96 rounded-full bg-gold/5 blur-3xl" />
-      <div className="absolute bottom-20 left-0 h-96 w-96 rounded-full bg-blush/30 blur-3xl" />
+      <div className="absolute right-0 top-20 h-96 w-96 rounded-full bg-gold/20 blur-3xl" />
+      <div className="absolute bottom-20 left-0 h-96 w-96 rounded-full bg-blush/40 blur-3xl" />
     </section>
   );
 }
